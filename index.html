@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>goit-markup-hw-05</title>
+    <title>goit-markup-hw-06</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -652,25 +652,87 @@
             </li>
           </ul>
         </div>
+
+      <form class="email-form uppercase" autocomplete="on" novalidate>
+        <div class="email-form-wrapper" role="group" aria-labelledby="email-input">
+          <p id="email-input">Подпишитесь на рассылку</p>
+          <input type="email" name="email" id="footer-email" class="input" placeholder="E-mail" />
+          <button type="submit" class="button">
+            Подписаться
+            <svg class="email-form-icon" height="24" width="24">
+              <use href="./images/icons.svg#send"></use>
+            </svg>
+          </button>
+        </div>
+      </form>
       </div>
     </footer>
 
     <div class="backdrop-sign is-hidden" data-modal>
       <div class="modal-sign">
         <button class="close-button" data-modal-close>
-          <svg
-            width="30"
-            height="30"
-            viewBox="0 0 30 30"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M21 10.1079L19.8921 9L15.5 13.3921L11.1079 9L10 10.1079L14.3921 14.5L10 18.8921L11.1079 20L15.5 15.6079L19.8921 20L21 18.8921L16.6079 14.5L21 10.1079Z"
-              fill="black"
-            />
+          <svg height="18" width="18">
+            <use href="./images/icons.svg#close"></use>
           </svg>
         </button>
+
+        <form class="modal-form" autocomplete="on" novalidate>
+          <div class="modal-form-wrapper" role="group" aria-labelledby="form-heading">
+            <p id="form-heading" class="form-heading">
+              Оставьте свои данные, мы вам перезвоним
+            </p>
+        
+            <div class="group">
+              <label class="label" for="name">Имя</label>
+              <div class="form-field">
+                <input id="name" class="input" type="text" name="name" />
+                <svg class="icon" height="18" width="18">
+                  <use href="./images/icons.svg#person"></use>
+                </svg>
+              </div>
+            </div>
+        
+            <div class="group">
+              <label for="tel" class="label">Телефон</label>
+              <div class="form-field">
+                <input id="tel" class="input" type="tel" name="tel" />
+                <svg class="icon" height="18" width="18">
+                  <use href="./images/icons.svg#phone"></use>
+                </svg>
+              </div>
+            </div>
+        
+            <div class="group">
+              <label for="email" class="label">Почта</label>
+              <div class="form-field">
+                <input id="email" class="input" type="email" name="email" />
+                <svg class="icon" height="18" width="18">
+                  <use href="./images/icons.svg#email"></use>
+                </svg>
+              </div>
+            </div>
+        
+            <div class="group">
+              <label for="comment" class="label">Комментарий</label>
+              <div class="form-field">
+                <textarea class="input textarea" name="comment" id="comment" placeholder="Введите текст" rows="6"></textarea>
+              </div>
+            </div>
+          </div>
+        
+          <div class="group">
+            
+            <label class="checkbox-label">
+              <input class="checkbox visually-hidden" type="checkbox" name="checkbox" />
+              <svg class="checkbox-icon" height="15" width="16">
+                <use href="./images/icons.svg#check-mark"></use>
+              </svg>
+              <span class="checkbox-label-text">Соглашаюсь с рассылкой и принимаю</span>
+            </label>
+            <a class="link" href="#">Условия договора</a>
+          </div>
+        </form>
+        <button class="button" type="submit">Отправить</button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
